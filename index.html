@@ -313,14 +313,11 @@
       display:grid;
       place-items:center;
     }
-    .logo-letter{
-      color:var(--red);
-      font-size:54px;
-      line-height:1;
-      font-weight:950;
-      font-family:Arial Black,Arial,"Microsoft JhengHei",sans-serif;
-      letter-spacing:-.08em;
-      transform:skew(-8deg);
+    .logo-shield{
+      width:48px;
+      height:54px;
+      display:block;
+      filter:drop-shadow(0 4px 8px rgba(211,11,23,.12));
     }
     .back-dot:before{content:none}
     .brand-name{
@@ -744,6 +741,43 @@
     }
     .trust-row{justify-content:center;margin-top:16px}
     .trust{font-size:15px;color:#8a909d;background:transparent;border:0}
+    .form-wrap,.finish{background:#fafafa}
+    .form-card,.finish-card{
+      border-color:#f0d9dc;
+      box-shadow:0 18px 42px rgba(122,9,16,.10);
+    }
+    .step-dot.active,.step-dot.done{
+      background:linear-gradient(135deg,#ed1d2e,#c80410);
+      color:#fff;
+    }
+    .step-line.done{background:linear-gradient(90deg,#ed1d2e,#c80410)}
+    .form-title{color:#252a33}
+    .choice.selected{
+      border-color:#e11d2e;
+      background:#fff1f2;
+      color:#c80410;
+      box-shadow:inset 0 0 0 1px rgba(211,11,23,.16);
+    }
+    .field input:focus,.field select:focus{
+      border-color:#e11d2e;
+      box-shadow:0 0 0 4px rgba(211,11,23,.10);
+    }
+    .free-box{
+      border-color:#fecdd3;
+      background:#fff1f2;
+      color:#b80b16;
+    }
+    .back-btn{background:#fff1f2;color:#b80b16}
+    .next-btn,.next-btn.gold{
+      background:linear-gradient(135deg,#ed1d2e,#c80410);
+      color:#fff;
+      box-shadow:0 12px 22px rgba(211,11,23,.20);
+    }
+    .finish-top{
+      background:linear-gradient(145deg,#ed1d2e,#c80410);
+    }
+    .spinner{border-top-color:var(--red)}
+    .summary b{color:#b80b16}
 
     @media (max-width:760px){
       .app{
@@ -760,7 +794,7 @@
         width:52px;
         height:52px;
       }
-      .logo-letter{font-size:38px}
+      .logo-shield{width:34px;height:39px}
       .brand-name{font-size:22px;line-height:1.16;max-width:250px}
       .sub-head{margin:8px 0 0 64px;font-size:14px;line-height:1.45}
       .status{display:none}
@@ -842,7 +876,7 @@
       .top{min-height:224px;padding:30px 30px 88px}
       .top:before{inset:auto -110px -250px -90px;height:260px}
       .back-dot{width:58px;height:58px}
-      .logo-letter{font-size:42px}
+      .logo-shield{width:38px;height:43px}
       .brand-name{font-size:25px;line-height:1.16;max-width:430px}
       .sub-head{
         margin:8px 0 0 76px;
@@ -878,7 +912,7 @@
 <div class="app">
   <header class="top">
     <div class="brand-row">
-      <div class="brand"><span class="back-dot" aria-hidden="true"><span class="logo-letter">S</span></span><span class="brand-name" data-company-name>順富資產管理有限公司</span></div>
+      <div class="brand"><span class="back-dot" aria-hidden="true"><svg class="logo-shield" viewBox="0 0 64 72" focusable="false"><path d="M32 4 56 13v18c0 17-9.7 29.6-24 36C17.7 60.6 8 48 8 31V13L32 4Z" fill="#d30b17"/><path d="M22 35.5 29.2 43 43.5 27" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="brand-name" data-company-name>順富資產管理有限公司</span></div>
       <div class="status">線上服務中</div>
     </div>
     <div class="sub-head">專業貸款・快速審核・安心申貸</div>
